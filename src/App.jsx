@@ -5,6 +5,7 @@ import { javascript } from "@codemirror/lang-javascript";
 import { useCallback, useState } from "react";
 import Result from "./components/Result";
 import { EditorView } from "@codemirror/view";
+import './components/App.css'
 
 const App = () => {
   // Load initial values from local storage
@@ -12,29 +13,7 @@ const App = () => {
   const [css_edit, setCss_edit] = useState(localStorage.getItem("css_edit") || "");
   const [js_edit, setJs_edit] = useState(localStorage.getItem("js_edit") || "");
 
-  const myTheme = EditorView.theme(
-    {
-      "&": {
-        color: "white",
-        backgroundColor: "#034",
-      },
-      ".cm-content": {
-        caretColor: "#0e9",
-      },
-      "&.cm-focused .cm-cursor": {
-        borderLeftColor: "#0e9",
-      },
-      "&.cm-focused .cm-selectionBackground, ::selection": {
-        backgroundColor: "#074",
-      },
-      ".cm-gutters": {
-        backgroundColor: "#045",
-        color: "#ddd",
-        border: "none",
-      },
-    },
-    { dark: true }
-  );
+ 
 
   const onChangeHtml = useCallback((value) => {
     setHtml_edit(value);
@@ -83,7 +62,7 @@ const App = () => {
   </html>`;
 
   return (
-    <div className="bg-[#1e272ed9] p-4">
+    <div className="bg-[#1e272ed9] pp p-4">
       <div className="p-2">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
           <div className="bg-[#282c34] p-4 rounded-xl shadow">
