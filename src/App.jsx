@@ -62,7 +62,7 @@ const App = () => {
   </html>`;
 
   return (
-    <div className="bg-[#1e272ed9] pp p-4">
+    <div className="bg-[#1e272ed9] sm:h-full lg:h-screen p-4">
       <div className="p-2">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
           <div className="bg-[#282c34] p-4 rounded-xl shadow">
